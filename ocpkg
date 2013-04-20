@@ -12,7 +12,7 @@
 # SECTION 1. Global variable setting
 # SECTION 2. Command line option hanling
 # SECTION 3. Error handling & cleanup
-# SECTION 4. Function definitions
+# SECTION 4. Function definition
 # SECTION 5. Main program
 
 # Notes:
@@ -46,7 +46,7 @@ declare -A PACKAGE_DESCRIPTION=(
     [dev]="LiveDVD ISO image ~900MB with OpenCog Developement Environment"
     [kvm]="TBD Ubuntu KVM image with OpenCog Server"
  [demovm]="TBD Ubuntu VirtualBox image with OpenCog Unity3D proxy for demo"
-   [debs]="TBD Ubuntu packages (deb files)" 
+   [debs]="TBD Ubuntu packages (deb file)" 
 )
 
 PATH_PREFIX=/usr/local
@@ -362,7 +362,7 @@ while getopts ":i:o:j:s:c:l:r:adunbtrvh" flag ; do
   case $flag in
     i)	INPUT_ISO_NAME="$OPTARG" ;;          
     o)	OUTPUT_ISO_NAME="$OPTARG" ;;          
-    j)	MAKE_JOBS="$OPTARG" ;;			#override auto-detected MAKE_JOBS
+    j)	MAKE_JOBS="$OPTARG" ;;			#override auto-detected MAKE_JOB
     s)	HOST_SOURCE_BRANCH="$OPTARG" ;;   
     c)	HOST_BUILD_DIR="$OPTARG" ;;		#local cached build dir
     l)	LIVE_BUILD_DIR="$OPTARG" ;;		#live build directory
